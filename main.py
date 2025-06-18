@@ -1438,13 +1438,32 @@ class ReportGenerator:
 
         now = TimeHelper.get_beijing_time()
         payload = {
-            "msg_type": "text",
-            "content": {
-                "total_titles": total_titles,
-                "timestamp": now.strftime("%Y-%m-%d %H:%M:%S"),
-                "report_type": report_type,
-                "text": text_content,
-            },
+            "msg_type": "interactive",
+            "card": {
+                "schema": "2.0",
+                "body": {
+                    "elements": [
+                        {
+                            "tag": "markdown",
+                            "element_id": "111111",
+                            "margin": "0px 0px 0px 0px",
+                            "content": text_content,
+                            "text_size": "normal",
+                            "text_align": "left"
+                        }
+                    ]
+                },
+                "header": {
+                    "title": {
+                        "tag": "plain_text",
+                        "content": total_titles
+                    },
+                    "subtitle": {
+                        "tag": "plain_text",
+                        "content": now.strftime("%Y-%m-%d %H:%M:%S")
+                    },
+                }
+            }
         }
 
         try:
