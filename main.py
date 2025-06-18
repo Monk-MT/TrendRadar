@@ -1456,12 +1456,14 @@ class ReportGenerator:
                 "header": {
                     "title": {
                         "tag": "plain_text",
-                        "content": total_titles
+                        "content": str(total_titles)
                     },
                     "subtitle": {
                         "tag": "plain_text",
                         "content": now.strftime("%Y-%m-%d %H:%M:%S")
                     },
+                    "template": "blue",
+                    "padding": "12px 12px 12px 12px"
                 }
             }
         }
