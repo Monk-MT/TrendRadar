@@ -32,14 +32,15 @@ HarmonyOS
 刘慈欣
 
 米哈游
-原神
-星穹铁道
+腾讯
 
 京东
 刘强东
 
 字节
 张一鸣
+
+懂车帝
 
 马斯克
 特斯拉
@@ -52,11 +53,14 @@ Microsoft
 NVIDIA
 
 AMD
+苏妈
+苏姿丰
 
 谷歌
 google
 gemini
 deepmind
+android
 
 chatgpt
 openai
@@ -68,6 +72,7 @@ iphone
 ipad
 mac
 ios
+库克
 
 ai
 !gai
@@ -76,6 +81,7 @@ ai
 汽车
 自动驾驶
 l3
+l4
 
 机器人
 
@@ -92,3 +98,6 @@ l3
 火星
 宇宙
 飞船
+
+游戏
+xspace
