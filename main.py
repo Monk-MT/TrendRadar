@@ -1456,11 +1456,11 @@ class ReportGenerator:
                 "header": {
                     "title": {
                         "tag": "plain_text",
-                        "content": str(total_titles)
+                        "content": "新闻总数：str(total_titles)"
                     },
                     "subtitle": {
                         "tag": "plain_text",
-                        "content": now.strftime("%Y-%m-%d %H:%M:%S")
+                        "content": "时间：{now.strftime("%Y-%m-%d %H:%M:%S")}"
                     },
                     "template": "blue",
                     "padding": "12px 12px 12px 12px"
@@ -1608,10 +1608,13 @@ class NewsAnalyzer:
             ("bilibili-hot-search", "bilibili 热搜"),
             ("cls-hot", "财联社热门"),
             ("ifeng", "凤凰网"),
-            "tieba",
-            "weibo",
-            "douyin",
-            "zhihu",
+            ("tieba", "贴吧"),
+            ("weibo", "微博"),
+            ("douyin", "抖音"),
+            ("zhihu", "知乎"),
+            ("_36kr", "36 氪"),
+            ("juejin", "掘金"),
+            # ("smzdm", "值得买"),
         ]
 
         print(f"开始爬取数据，请求间隔 {self.request_interval} 毫秒")
