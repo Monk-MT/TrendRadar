@@ -1456,11 +1456,11 @@ class ReportGenerator:
                 "header": {
                     "title": {
                         "tag": "plain_text",
-                        "content": "新闻总数：str(total_titles)"
+                        "content": f"新闻总数：{total_titles}"
                     },
                     "subtitle": {
                         "tag": "plain_text",
-                        "content": "时间：{now.strftime("%Y-%m-%d %H:%M:%S")}"
+                        "content": f"时间：{now.strftime('%Y-%m-%d %H:%M:%S')}"
                     },
                     "template": "blue",
                     "padding": "12px 12px 12px 12px"
