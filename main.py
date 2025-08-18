@@ -1334,39 +1334,39 @@ class ReportGenerator:
         """渲染飞书内容"""
         text_content = ""
 
-        # 渲染热点词汇统计
-        if report_data["stats"]:
-            text_content += "📊 **热点词汇统计**\n\n"
+        # # 渲染热点词汇统计
+        # if report_data["stats"]:
+        #     text_content += "📊 **热点词汇统计**\n\n"
 
-        total_count = len(report_data["stats"])
+        # total_count = len(report_data["stats"])
 
-        for i, stat in enumerate(report_data["stats"]):
-            word = stat["word"]
-            count = stat["count"]
+        # for i, stat in enumerate(report_data["stats"]):
+        #     word = stat["word"]
+        #     count = stat["count"]
 
-            sequence_display = f"<font color='grey'>[{i + 1}/{total_count}]</font>"
+        #     sequence_display = f"<font color='grey'>[{i + 1}/{total_count}]</font>"
 
-            if count >= 10:
-                text_content += f"🔥 {sequence_display} **{word}** : <font color='red'>{count}</font> 条\n\n"
-            elif count >= 5:
-                text_content += f"📈 {sequence_display} **{word}** : <font color='orange'>{count}</font> 条\n\n"
-            else:
-                text_content += f"📌 {sequence_display} **{word}** : {count} 条\n\n"
+        #     if count >= 10:
+        #         text_content += f"🔥 {sequence_display} **{word}** : <font color='red'>{count}</font> 条\n\n"
+        #     elif count >= 5:
+        #         text_content += f"📈 {sequence_display} **{word}** : <font color='orange'>{count}</font> 条\n\n"
+        #     else:
+        #         text_content += f"📌 {sequence_display} **{word}** : {count} 条\n\n"
 
-            for j, title_data in enumerate(stat["titles"], 1):
-                formatted_title = ReportGenerator._format_title_feishu(
-                    title_data, show_source=True
-                )
-                text_content += f"  {j}. {formatted_title}\n"
+        #     for j, title_data in enumerate(stat["titles"], 1):
+        #         formatted_title = ReportGenerator._format_title_feishu(
+        #             title_data, show_source=True
+        #         )
+        #         text_content += f"  {j}. {formatted_title}\n"
 
-                if j < len(stat["titles"]):
-                    text_content += "\n"
+        #         if j < len(stat["titles"]):
+        #             text_content += "\n"
 
-            if i < len(report_data["stats"]) - 1:
-                text_content += f"\n{CONFIG['FEISHU_SEPARATOR']}\n\n"
+        #     if i < len(report_data["stats"]) - 1:
+        #         text_content += f"\n{CONFIG['FEISHU_SEPARATOR']}\n\n"
 
-        if not text_content:
-            text_content = "📭 暂无匹配的热点词汇\n\n"
+        # if not text_content:
+        #     text_content = "📭 暂无匹配的热点词汇\n\n"
 
         # 渲染新增新闻部分
         if report_data["new_titles"]:
